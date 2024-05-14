@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* Første linje: kun for å teste at css filen lastes */
+h1.nx-mt-2.nx-text-slate-900 {
+	color:  red;
+}
+
+
+/* 'map' css classer til standard markdown varianter */
+
+blockquote {
+	@apply nx-text-slate-900 text-2xl font-semibold text-gray-900 dark:text-white;
+
+}
+
+blockquote p {
+	/* 'drop italic på sitater */
+	font-style: normal; 
+}
+
+
+/* 'map' css sitat  */
+
+cite {
+	@apply ps-3 text-sm text-gray-500 dark:text-gray-400;
+	font-style: normal;
+	text-align: right;
+}
