@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 
 import * as JordContent from './landsleiebolken/jord.no.mdx';
 import * as SlaveContent from './landsleiebolken/slave.no.mdx';
@@ -10,9 +11,14 @@ import * as HvalContent from './landsleiebolken/hval.no.mdx';
 import * as PageList from './landsleiebolken/_meta.no.json'; 
 
  
-import Card from 'components/card'
- 
+import Card from 'components/card';
+import TextCard from 'components/textcard'
+import HCard from 'components/hcard'
+import SmallCard from 'components/smallcard'
+import HalfCard from 'components/halfcard'
 
+
+ 
 
 # Landsleiebolken
 
@@ -26,11 +32,9 @@ Denne bolken handler om landsleie.
   
 ))}
 
-&nbsp;
-&nbsp;
-<hr/>
-&nbsp;
-&nbsp;
+<TextCard title="Min tittel"   bodytext="bodytext"  /> 
+<HCard obj={  <SildContent.default /> } />   
+ 
 
 <Card obj={  <SildContent.default /> } /> 
 <Card obj={  <AgriContent.default /> } /> 
@@ -76,13 +80,6 @@ Denne bolken handler om landsleie.
 </div>
 
 
-<div class="max-w rounded overflow-hidden shadow-lg my-4">
-  <img class="w-full" src="https://i0.wp.com/www.visitfrosta.no/wp-content/uploads/2021/02/Tinghaugen-15.jpg" alt="Trell" />
-  <div class="p-4">
-    {  <AgriContent .default /> } 
-  </div>
-</div>
-
  
 
 {  <TunContent.default /> } 
@@ -96,13 +93,12 @@ Denne bolken handler om landsleie.
 &nbsp;
 
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="https://www.nb.no/content/uploads/2024/02/50x70-Landsleiebolken-kapittel-60-1-jpg-scaled.jpg" alt="dLandsleieboken kap 60" />
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">Landsleiebolken</div>
-    <p class="text-gray-700 text-base">Denne bolken handler om landsleie.</p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Landloven</span> 
-  </div>
+ 
+
+<HalfCard title="Tittel" bodytext="Some random text here" image="https://media.snl.no/media/193281/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+
+
+<div class="flex grid gap-3 grid-cols-3 my-8">
+  <SmallCard obj={  <AgriContent.default /> } image="https://media.snl.no/media/193281/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+  <SmallCard obj={  <JordContent.default /> } image="https://leksikon.fylkesarkivet.no/mediaFiles/5356/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
 </div>
