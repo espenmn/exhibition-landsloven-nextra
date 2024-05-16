@@ -6,7 +6,7 @@
 
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
-	color:  red;
+	 color: #d34c4c;
 }
 
 
@@ -14,19 +14,27 @@ h1.nx-mt-2.nx-text-slate-900 {
 
 blockquote {
 	@apply nx-text-slate-900 text-2xl font-semibold text-gray-900 dark:text-white;
+	@apply font-serif;
+	
 
 }
 
 blockquote p {
 	/* 'drop italic på sitater */
 	font-style: normal; 
+		
 }
 
-
-/* 'map' css sitat  */
-
+/* 'map' css sitat / author / copyright / kilde */
 cite {
 	@apply ps-3 text-sm text-gray-500 dark:text-gray-400;
 	font-style: normal;
-	text-align: right;
+}
+
+blockquote cite {
+	@apply ps-3 text-sm text-gray-500 dark:text-gray-400;
+	@apply font-sans;
+	
+	font-weight: 300;
+	
 }

@@ -1,3 +1,108 @@
+
+import * as JordContent from './landsleiebolken/jord.no.mdx';
+import * as SlaveContent from './landsleiebolken/slave.no.mdx';
+import * as AgriContent from './landsleiebolken/agri.no.mdx';
+import * as TunContent from './landsleiebolken/tun.no.mdx';
+import * as SildContent from './landsleiebolken/sild.no.mdx';
+import * as HvalContent from './landsleiebolken/hval.no.mdx';
+
+
+import * as PageList from './landsleiebolken/_meta.no.json'; 
+
+ 
+import Card from 'components/card'
+ 
+
+
 # Landsleiebolken
 
 Denne bolken handler om landsleie.
+
+<comment> maybe loop and render all ? </comment>
+
+{Object.keys(PageList).map((fileName) => (
+
+  <div key={fileName}>{fileName}</div>
+  
+))}
+
+&nbsp;
+&nbsp;
+<hr/>
+&nbsp;
+&nbsp;
+
+<Card obj={  <SildContent.default /> } /> 
+<Card obj={  <AgriContent.default /> } /> 
+<Card obj={  <SlaveContent.default /> } /> 
+<Card obj={  <SildContent.default /> } /> 
+<Card obj={  <AgriContent.default /> } /> 
+
+
+
+<div class="flex grid gap-3 grid-cols-3">
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://leksikon.fylkesarkivet.no/mediaFiles/5356/1412017001.jpg" alt="Sildefisket" />
+  <div class="px-6 py-4">
+    {  <HvalContent.default /> }
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Landloven</span> 
+  </div>
+</div>
+
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://www.nb.no/content/uploads/2024/02/PraktutgaveLandsloven.jpg" alt="Sildefisket e" />
+  <div class="px-6 py-4">
+    {  <JordContent.default /> }
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Landloven</span> 
+  </div>
+</div>
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://media.snl.no/media/193281/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Trell" />
+  <div class="px-6 py-4">
+    {  <SlaveContent.default  /> }
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Landloven</span> 
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="max-w rounded overflow-hidden shadow-lg my-4">
+  <img class="w-full" src="https://i0.wp.com/www.visitfrosta.no/wp-content/uploads/2021/02/Tinghaugen-15.jpg" alt="Trell" />
+  <div class="p-4">
+    {  <AgriContent .default /> } 
+  </div>
+</div>
+
+ 
+
+{  <TunContent.default /> } 
+{  <SildContent.default /> } 
+{  <HvalContent.default  /> }
+
+&nbsp;
+&nbsp;
+<hr/>
+&nbsp;
+&nbsp;
+
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://www.nb.no/content/uploads/2024/02/50x70-Landsleiebolken-kapittel-60-1-jpg-scaled.jpg" alt="dLandsleieboken kap 60" />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Landsleiebolken</div>
+    <p class="text-gray-700 text-base">Denne bolken handler om landsleie.</p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Landloven</span> 
+  </div>
+</div>
