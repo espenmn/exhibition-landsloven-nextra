@@ -6,7 +6,12 @@
 
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
-	 color: #d34c4c;
+	 color: #d34c4c; 
+}
+
+.smallcard h1.nx-mt-2.nx-text-slate-900 {
+	 /* color: #d34c4c; */
+	 @apply text-3xl text-rose-800 dark:text-gray-300 ;
 }
 
 

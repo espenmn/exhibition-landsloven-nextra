@@ -1,8 +1,8 @@
 const SmallCard = ({ obj, image, alt, tag }: { obj?: object, image?: string, alt?: string, tag?: string }) => {
 
   return (
-     <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" src={image} alt={alt} />
+     <div class="max-w-sm rounded overflow-hidden shadow-lg smallcard">
+        <img class="w-full object-cover aspect-[9/7]" src={image} alt={alt} />
       <div class="px-6 py-4">
         {  obj }
       </div>
