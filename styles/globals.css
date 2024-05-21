@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 
+/* Code block design */
+code.nx-border-black {
+  font-family: Consolas,"courier new";
+  xbackground-color: #f1f1f1 !important;
+  xbackground: #f1f1f1 !important;
+  padding: 2px;
+  font-size: 105%;
+}
 
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
@@ -40,7 +48,5 @@ cite {
 blockquote cite {
 	@apply ps-3 text-sm text-gray-500 dark:text-gray-400;
 	@apply font-sans;
-	
 	font-weight: 300;
-	
 }

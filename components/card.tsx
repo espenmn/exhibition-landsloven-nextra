@@ -1,18 +1,19 @@
-const Card = ({ obj }: { obj?: object }) => {
-return (
-    <article>
-      <div class="max-w rounded overflow-hidden shadow-lg bg-white">
-      <img class="w-full" src="https://i0.wp.com/www.visitfrosta.no/wp-content/uploads/2021/02/Tinghaugen-15.jpg" alt="Trell" />
-      <div class="p-4">
-            {  obj }
-
+const Card = ({ obj, imageurl, alttext }: { obj?: object, imageurl?: string, alttext?: string  }) => {
+  return (
+      <article>
+        <div class="max-w rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src={imageurl} alt={alttext} />
+        <div class="p-4">
+              {  obj }
+  
+        </div>
       </div>
-    </div>
-    </article>
-  );
-};
-
-export default Card;
+      </article>
+    );
+  };
   
-  
+  export default Card;
+    
+    
+   
  
