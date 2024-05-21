@@ -26,11 +26,24 @@ Denne bolken handler om landsleie.
 
 <comment> maybe loop and render all ? </comment>
 
-{Object.keys(PageList).map((fileName) => (
+<HCard obj={Object.keys(PageList).map((fileName) => (
 
   <div key={fileName}>{fileName}</div>
   
-))}
+))
+
+}/>
+
+
+
+
+
+
+
+
+
+
+
 
 <TextCard title="Min tittel"   bodytext="bodytext"  /> 
 <HCard obj={  <SildContent.default /> } />   
