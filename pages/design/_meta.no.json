@@ -2,22 +2,26 @@
   "design": {
     "title": "Design EMN",
     "image": "/images/1412017001.jpg",
-    "desc": "Design description here bla bla bla"
+    "desc": "Design description here bla bla bla",
+    "komponent": "SubBox"
   },
   "jord": {
     "title": "Jordleie",
     "image": "/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg",
-    "desc": "Jordleie description \n here bla bla bla"
+    "desc": "Jordleie description \n here bla bla bla",
+    "komponent": "SubBox"
   },
   "slave": {
     "title": "Treller, livegne og leilendinger",
     "image": "/images/1412017001.jpg",
-    "desc": "Treller description  here bla bla bla"
+    "desc": "Treller description  here bla bla bla",
+    "komponent": "SubBox"
   },
   "agri": {
     "title": "Jordbruket",
     "image": "/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg",
-    "desc": "Jordbruk description  here bla bla bla"
+    "desc": "Jordbruk description  here bla bla bla",
+    "komponent": "Card"
   },
   "tun": {
     "title": "Tunet",
