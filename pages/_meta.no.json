@@ -18,6 +18,10 @@
     "title": "Bolkene",
     "type": "menu",
     "items": {
+      "design": {
+        "title": "Design",
+        "href": "/design/introduksjon"
+      },
       "prologen": {
         "title": "Prolog",
         "href": "/prologen/introduksjon"

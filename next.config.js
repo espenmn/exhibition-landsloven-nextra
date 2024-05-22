@@ -7,5 +7,10 @@ module.exports = withNextra({
   i18n: {
     locales: ['no', 'en'],
     defaultLocale: 'no'
-  }
+  },
+  images: {
+
+  },
 })
+
+ 

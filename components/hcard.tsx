@@ -1,8 +1,20 @@
-const HCard = ({ obj }: { obj?: object }) => {
+import Image from 'next/image'
+
+
+
+// image should have width / height (but we dont know that, so we need to set fill or height 0 (?)
+
+const HCard = ({ obj, imageurl, alttext }: { obj?: object, imageurl?: string, alttext?: string  }) => {
 return (
   <div class="max-w-sm w-full lg:max-w-full lg:flex my-4 max-w rounded shadow-lg xoverflow-hidden" >
-      <img class="w-1/3 object-cover transition duration-300 ease-in-out hover:scale-105" 
-        src="https://i0.wp.com/www.visitfrosta.no/wp-content/uploads/2021/02/Tinghaugen-15.jpg" alt="Trell" />
+              <Image
+            src={imageurl}  
+            alt={alttext}
+            width={0}
+            height={0}
+            sizes="100vw"
+            class="w-1/3 object-cover transition duration-300 ease-in-out hover:scale-105" 
+          />
       <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
           <p class="text-sm text-gray-600 flex items-center">
@@ -13,6 +25,7 @@ return (
              &nbsp; Fakta / Fact
           </p>
           <div>
+            &nbsp;
             {obj}
           </div>
         </div>

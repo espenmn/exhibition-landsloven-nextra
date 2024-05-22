@@ -1,8 +1,19 @@
+import Image from 'next/image'
+
 const HalfCard = ({ title, bodytext, image, alt, tag }: { title?: string, bodytext?: string, image?: string, alt?: string, tag?: string }) => {
 
   return (
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src={image} alt={alt} />
+        <Image
+            src={image}
+            alt={alt}
+            width={0}
+            height={0}
+            sizes="100vw"
+            class="w-half object-cover aspect-[9/7]" 
+          />
+
+  
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">{title}</div>
         <p class="text-gray-700 text-base">{bodytext}</p>

@@ -1,8 +1,19 @@
+import Image from 'next/image'
+
 const SmallCard = ({ obj, image, alt, tag }: { obj?: object, image?: string, alt?: string, tag?: string }) => {
 
   return (
      <div class="max-w-sm rounded overflow-hidden shadow-lg smallcard">
-        <img class="w-full object-cover aspect-[9/7]" src={image} alt={alt} />
+        <Image
+            src={image}
+            alt={alt}
+            width={0}
+            height={0}
+            sizes="100vw"
+            class="w-full object-cover aspect-[9/7]" 
+          />
+
+ 
       <div class="px-6 py-4">
         {  obj }
       </div>
