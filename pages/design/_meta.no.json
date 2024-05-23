@@ -3,35 +3,41 @@
     "title": "Design EMN",
     "image": "/images/1412017001.jpg",
     "desc": "Design description here bla bla bla",
-    "komponent": "SubBox"
+    "komponent": "HCard",
+    "klass": "w-full"
   },
   "jord": {
     "title": "Jordleie",
     "image": "/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg",
     "desc": "Jordleie description \n here bla bla bla",
-    "komponent": "SubBox"
+    "komponent": "SubBox",
+    "klass": "w-full"
   },
   "slave": {
     "title": "Treller, livegne og leilendinger",
     "image": "/images/1412017001.jpg",
     "desc": "Treller description  here bla bla bla",
-    "komponent": "SubBox"
+    "komponent": "SubBox",
+    "klass": "w-1/2"
   },
   "agri": {
     "title": "Jordbruket",
     "image": "/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg",
     "desc": "Jordbruk description  here bla bla bla",
-    "komponent": "Card"
+    "komponent": "Card",
+    "klass": "w-1/2"
   },
   "tun": {
     "title": "Tunet",
     "image": "/images/1412017001.jpg",
-    "desc": "Tunet description  here bla bla bla"
+    "desc": "Tunet description  here bla bla bla",
+    "klass": "w-1/2"
   },
   "sild": {
     "title": "Sildefiske",
     "image": "/images/1412017001.jpg",
-    "desc": "Sildefisket bla bla "
+    "desc": "Sildefisket bla bla ",
+    "klass": "w-1/2"
   },
   "hval": {
     "title": "Hval"

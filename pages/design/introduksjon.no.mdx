@@ -19,13 +19,12 @@ import HCard from 'components/hcard';
 import SmallCard from 'components/smallcard';
 import HalfCard from 'components/halfcard';
 import Parallax from 'components/parallax';
+import Quoter from 'components/quoter';
 
 
 # Design !!!
 
-Random text
-
-<SubPages meta={meta} />
+Random text --MainPages meta=\{meta\} 
 
  
 
@@ -150,12 +149,12 @@ Eksempler på bruk av designkomponenter [Espen MN].
 ```
 
 <div class="flex grid gap-3 grid-cols-3 my-8">
-  <SmallCard desc={  <AgriContent.default /> } image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
-  <SmallCard desc={  <JordContent.default /> } image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
-  <SmallCard desc={  <HvalContent.default /> } image="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <SmallCard desc={  <AgriContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+  <SmallCard desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <SmallCard desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
 </div>
-
-
+ 
+<Quoter quote="SOmething here" name="Espen Moe-Nilssen" worktitle="Designer" image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"     />
 
 <Parallax obj={ SildContent } />
 
