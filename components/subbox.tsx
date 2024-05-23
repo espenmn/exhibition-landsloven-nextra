@@ -10,7 +10,7 @@ const SubBox= ({ title, desc, imageurl, path }: { title?: string, desc?: string,
   return (
       <div
         key={path}
-        className='flex flex-row gap-3 border border-gray-200'
+        className='flex flex-row gap-3 border border-gray-200 bg-white'
       >
         <div className="w-1/2">
         <Link

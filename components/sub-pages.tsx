@@ -4,13 +4,28 @@ import Link from 'next/link';
 import { Meta } from 'nextra';
 import SubBox from  './subbox';
 import Card from  './card';
-
-    
-
+import Card from  './card';
+import SmallCard from  './smallcard';
+import HCard from  './hcard';
+ 
 const componentsMap = {
   SubBox: SubBox,
   Card: Card,
+  SmallCard, SmallCard,
+  HCard, HCard
 };
+
+// type MetaMenuItems = {
+//   [key: string]: {
+//     title: string;
+//     href: string;
+//     desc: string;
+//     imageurl: string;
+//     alttext: string;
+//     klass: string;
+//   };
+// };
+
 
 const SubPages = ({ meta }: { meta: Meta }) => {
   const subPages = Object.entries(meta).map(([key, value], i) => {

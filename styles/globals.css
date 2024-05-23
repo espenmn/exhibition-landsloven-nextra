@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/*For å se hvor elementene er */
+body  {
+	@apply bg-slate-50;
+}
 
 /* Code block design */
 code.nx-border-black {
   font-family: Consolas,"courier new";
-  xbackground-color: #f1f1f1 !important;
-  xbackground: #f1f1f1 !important;
   padding: 2px;
   font-size: 105%;
 }

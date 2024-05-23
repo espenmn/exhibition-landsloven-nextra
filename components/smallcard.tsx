@@ -1,12 +1,14 @@
 import Image from 'next/image'
 
-const SmallCard = ({ obj, image, alt, tag }: { obj?: object, image?: string, alt?: string, tag?: string }) => {
+const SmallCard = ({ desc, imageurl, alttext, tag }: { desc?: object, imageurl?: string, alttext?: string, tag?: string }) => {
+
+  //TO DO: Make check if 'obj' exists, if not use 'desc' from meta
 
   return (
-     <div class="max-w-sm rounded overflow-hidden shadow-lg smallcard">
+     <div class="max-w-sm rounded overflow-hidden shadow-lg smallcard bg-white">
         <Image
-            src={image}
-            alt={alt}
+            src={imageurl}
+            alt={alttext}
             width={0}
             height={0}
             sizes="100vw"
@@ -15,7 +17,7 @@ const SmallCard = ({ obj, image, alt, tag }: { obj?: object, image?: string, alt
 
  
       <div class="px-6 py-4">
-        {  obj }
+        {  desc }
       </div>
       <div class="px-6 pt-4 pb-2">
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span> 

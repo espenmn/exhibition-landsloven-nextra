@@ -1,12 +1,12 @@
 import Image from 'next/image'
-
-const HalfCard = ({ title, bodytext, image, alt, tag }: { title?: string, bodytext?: string, image?: string, alt?: string, tag?: string }) => {
+ 
+const HalfCard = ({ title, bodytext, imageurl, alttext, tag }: { title?: string, bodytext?: string, imageurl?: string, alttext?: string, tag?: string }) => {
 
   return (
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <Image
-            src={image}
-            alt={alt}
+            src={imageurl}
+            alt={alttext}
             width={0}
             height={0}
             sizes="100vw"
