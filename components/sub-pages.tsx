@@ -21,10 +21,12 @@ const componentsMap = {
 //     desc: string;
 //     imageurl: string;
 //     alttext: string;
-//     klass: string;
+//     className: string;
 //   };
 // };
 
+
+//TO DO validation of keys
 
 const SubPages = ({ meta }: { meta: Meta }) => {
   const subPages = Object.entries(meta).map(([key, value], i) => {
@@ -35,7 +37,7 @@ const SubPages = ({ meta }: { meta: Meta }) => {
     // const fallbackimage = 
     const imageurl = typeof value === 'string' ? value : value.image ||'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNjY2NjY2MiPjwvcmVjdD4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNnB4IiBmaWxsPSIjMzMzMzMzIj4yMDB4MjAwPC90ZXh0PiAgIAo8L3N2Zz4='; 
     const desc = typeof value === 'string' ? value : value.desc || ''
-    const klass = typeof value === 'string' ? value : value.klass || 'w-1/2'
+    const klass = typeof value === 'string' ? value : value.klass || ''
     const komponent = typeof value === 'string' ? value : value.komponent || 'SubBox'
     
     // TO DO: Check what width / sizes is correct for image

@@ -1,8 +1,16 @@
 import SubPages from 'components/sub-pages'
 import Work from 'components/work'
 import meta from './_meta.no.json'
-
 import dynamic from 'next/dynamic';
+import Card from 'components/card';
+import TextCard from 'components/textcard';
+import HCard from 'components/hcard';
+import SmallCard from 'components/smallcard';
+import HalfCard from 'components/halfcard';
+import Parallax from 'components/parallax';
+import Quoter from 'components/quoter';
+import FlexDiv from 'components/flexdiv';
+import FlexGrid from 'components/flexgrid';
 
 import * as JordContent from './jord.no.mdx';
 import * as SlaveContent from './slave.no.mdx';
@@ -13,23 +21,56 @@ import * as HvalContent from './hval.no.mdx';
 
 import * as PageList from './_meta.no.json'; 
  
-import Card from 'components/card';
-import TextCard from 'components/textcard';
-import HCard from 'components/hcard';
-import SmallCard from 'components/smallcard';
-import HalfCard from 'components/halfcard';
-import Parallax from 'components/parallax';
-import Quoter from 'components/quoter';
+import Image from 'next/image'
 
-
-# Design !!!
+# Design  
 
 Random text --MainPages meta=\{meta\} 
+&nbsp;
+
+<div class="my-4 flex flex-wrap justify-items-stretch divide-x divide-none sm:divide-solid lg:divide-solid divide-black divide-x-1">
+<div class="text-left flex-1">
+<h1 class="my-2 font-sans font-black text-2xl sm:text-xl lg:text-4xl text-left">FINN BÆREKRAFTS&shy;FORSKNING</h1>
+<p class="my-2">Vi støtter bla bla</p>
+</div>
+<div class="xgrow-0 sm:pl-5">
+ <Image 
+              src="/images/SDG-wheel.png" 
+              alt='logo' 
+              width={300} 
+              height={300} 
+              class="w-full object-cover aspect-[1/1]" 
+          />
+ 
+</div>
+</div>
+
 
  
+> \<FlexGrid maxcolumns={12} gap={3} padding={0} margin={0} \/\>
 
-
+&nbsp;
  
+<FlexGrid maxcolumns={12} gap={3} padding={0} margin={0}>
+      <div className="bg-red-500 h-32">Item 1</div>
+      <div className="bg-green-500 h-32">Item 2</div>
+      <div className="bg-blue-500 h-32">Item 3</div>
+      <div className="bg-yellow-500 h-32">Item 4</div>
+      <div className="bg-purple-500 h-32">Item 5</div>
+      <div className="bg-pink-500 h-32">Item 6</div>
+      <div className="bg-orange-500 h-32">Item 7</div>
+      <div className="bg-teal-500 h-32">Item 8</div>
+      <div className="bg-indigo-500 h-32">Item 9</div>
+    </FlexGrid>
+
+
+<FlexGrid maxcolumns={3} gap={3} padding={0} margin={4}>
+  <TextCard desc={  <AgriContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+  <SmallCard desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <SmallCard desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+ 
+</FlexGrid>
+
 
 
 # Design / Componenter

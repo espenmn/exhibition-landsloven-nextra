@@ -6,16 +6,16 @@ import Image from 'next/image'
 
 const HCard = ({ obj, imageurl, alttext }: { obj?: object, imageurl?: string, alttext?: string  }) => {
 return (
-  <div class="max-w-sm w-full lg:max-w-full lg:flex my-4 max-w rounded shadow-lg xoverflow-hidden" >
+  <div class="max-w-sm w-full lg:max-w-full lg:flex my-4 max-w rounded shadow-lg xoverflow-hidden bg-white" >
       <Image
             src={imageurl}  
             alt={alttext}
             width={0}
             height={0}
             sizes="100vw"
-            class="w-1/3 object-cover transition duration-300 ease-in-out hover:scale-105" 
+            class="w-1/3 lg:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105" 
       />
-      <div class="w-2/3 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="w-2/3 lg:w-full lg:max-w-full bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  justify-between leading-normal">
         <div class="mb-8">
           <p class="text-sm text-gray-600 flex items-center">
           <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

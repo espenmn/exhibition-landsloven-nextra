@@ -5,7 +5,7 @@ const SmallCard = ({ desc, imageurl, alttext, tag }: { desc?: object, imageurl?:
   //TO DO: Make check if 'obj' exists, if not use 'desc' from meta
 
   return (
-     <div class="max-w-sm rounded overflow-hidden shadow-lg smallcard bg-white">
+     <div class="rounded overflow-hidden shadow-lg type-smallcard smallcard bg-white">
         <Image
             src={imageurl}
             alt={alttext}

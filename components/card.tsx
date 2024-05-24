@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Card = ({ desc, imageurl, alttext }: { desc?: string, imageurl?: string, alttext?: string  }) => {
   return (
-      <article class="max-w rounded overflow-hidden shadow-lg bg-white">
+      <article class="rounded type-card overflow-hidden shadow-lg bg-white" >
  
           <Image
             src={imageurl}
@@ -12,7 +12,7 @@ const Card = ({ desc, imageurl, alttext }: { desc?: string, imageurl?: string, a
             width={0}
             height={0}
             sizes="100vw"
-            class="w-full object-cover aspect-[9/7] max-h-[500px]"
+            className="w-full object-cover aspect-[9/7] min-h-[100px] "
           />
  
         
