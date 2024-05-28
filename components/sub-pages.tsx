@@ -25,7 +25,7 @@ const componentsMap = {
 //   };
 // };
 
-
+ 
 //TO DO validation of keys
 
 const SubPages = ({ meta }: { meta: Meta }) => {

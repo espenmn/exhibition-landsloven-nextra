@@ -1,7 +1,15 @@
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import Image from 'next/image';
+
+// To DO: Change url of project
 
 const config: DocsThemeConfig = {
-  logo: <span>Landsloven</span>,
+  logo: (
+    <span>
+      <Image src="/images/landslov-logo.png" alt="Logo" width={200} height={40} />
+      {/* <span>Landsloven</span> */}
+    </span>
+  ),
   project: {
     link: 'https://github.com/uib-bub/exhibition-landsloven-nextra',
   },

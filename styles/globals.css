@@ -4,9 +4,23 @@
 
 /*For å se hvor elementene er */
 body  {
-	@apply bg-slate-50;
+	/* @apply sandy; */
+	background-color:#f8f8f8;
 }
 
+
+.bk-sand {
+    background-color:#f8f8f8 
+}
+
+
+.bk-sand2 {
+    background-color:#edede3;
+     background-image: 'images/landslov-ornament.png';
+       
+}
+
+ 
 /* Code block design */
 code.nx-border-black {
   font-family: Consolas,"courier new";
@@ -52,3 +66,6 @@ blockquote cite {
 	@apply font-sans;
 	font-weight: 300;
 }
+ 
+
+

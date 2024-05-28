@@ -5,6 +5,7 @@ interface FlexGridProps {
   padding?: string;
   gap?: string;
   bgcolor?: string;
+  bgimage?: string;
   smcolumns?: string;
   mdcolumns?: string;  
   lgcolumns?:  string;  
@@ -16,7 +17,7 @@ interface FlexGridProps {
  
 
 const FlexGrid: React.FC<FlexDivProps> = (props) => {
-  const { margin = 3, maxcolumns=6,  gap=3, padding=0, bgcolor='bg-white', children } = props;
+  const { margin = 3, maxcolumns=6,  gap=3, padding=0, bgcolor='bg-white', bgimage='', children } = props;
 
   // Calculate responsive column counts
   const columns = 'grid-cols-'  + Math.max(2, Math.floor(maxcolumns * 0.25)); 
@@ -31,8 +32,9 @@ const FlexGrid: React.FC<FlexDivProps> = (props) => {
 
   return ( 
       <div 
-        className={`flex grid gap-${gap} ${smcolumns} ${mdcolumns} ${lgcolumns} ${xlcolumns} ${xxccolumns} ${columns} p-${padding} my-${margin} ${bgcolor}`}>
-        {children}
+        className={`flex grid gap-${gap} ${columns} ${smcolumns} ${mdcolumns} ${lgcolumns} ${xlcolumns} ${xxccolumns}  p-${padding} my-${margin} ${bgcolor}`}
+         >
+        {children} 
       </div>
     );
   };

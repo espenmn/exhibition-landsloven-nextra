@@ -91,6 +91,12 @@
       }
     }
   },
+  "design": {
+    "title": "Design",
+    "type": "page",
+    "display": "hidden"
+
+  },
   "prologen": {
     "title": "Prolog",
     "type": "page",

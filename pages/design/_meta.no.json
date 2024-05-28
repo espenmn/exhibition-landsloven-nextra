@@ -1,6 +1,18 @@
-
-
 {
+  "---": {
+    "type": "separator"
+  },
+  "introduksjon": {
+    "title": "Design by EMN",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": false
+    }
+  },
   "design": {
     "title": "Design EMN",
     "image": "/images/1412017001.jpg",
@@ -13,7 +25,15 @@
     "image": "/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg",
     "desc": "Jordleie description \n here bla bla bla",
     "komponent": "SubBox",
-    "klass": "w-full"
+    "klass": "w-full",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": false,
+      "toc": true,
+      "pagination": false
+    }
   },
   "slave": {
     "title": "Treller, livegne og leilendinger",
