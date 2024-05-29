@@ -6,7 +6,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
     // Layout 1 if iamge exists
     <div>
     {image ? (
-     <div class="bg-slate-100 flex flex-wrap w-full rounded type-card overflow-hidden shadow-lg">
+     <div class="flex flex-wrap w-full rounded type-card overflow-hidden bg-white shadow-lg dark:bg-black">
 
          <figure class="w-1/3 dark:bg-slate-800">
           <Image
@@ -17,7 +17,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
             class="w-auto h-24 xmd:w-48 md:h-auto md:rounded-none rounded-full mx-auto object-cover]" 
           />
          </figure>
-         <div class="grow w-2/3 p-6 text-center md:text-left space-y-4 bg-white">
+         <div class="grow w-2/3 p-6 text-center md:text-left space-y-4">
              <p class="font-serif text-2xl font-medium dark:text-slate-100">
                {quote}
              </p>
@@ -31,9 +31,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
          </div> 
      </div>
      ) : (
-      <div class="bg-slate-100 flex flex-wrap w-full">
-
-         <div class="grow p-6 text-center md:text-left space-y-4  bg-red-700 xbg-sky-500 text-white dark:bg-slate-100 rounded-md">
+      <div class="w-full text-center md:text-left space-y-4  bg-red-700 xbg-sky-500 text-white dark:bg-white rounded-md">
              <p class="text-lg font-medium">
                {quote}
              </p>
@@ -43,8 +41,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
              </div>
              <div class="text-right text-sky-50 dark:text-slate-400">
                {worktitle}
-             </div> 
-         </div> 
+             </div>
      </div>
     )}
     </div>
