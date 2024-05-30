@@ -1,13 +1,16 @@
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import Image from 'next/image';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+import Image from 'next/image'
+ 
 
-// To DO: Change url of project
+
+  
 
 const config: DocsThemeConfig = {
   logo: (
-    <div className='flex gap-3'>
-      <Image src="/images/landslov-logo.png" alt="Logo" width={200} height={40} />
-      {/* <span className='font-antiqua'>Landsloven</span> */}
+    <div className='flex gap-2'>
+      <Image src="/images/logo_nett.svg" alt="Landsloven logo" width={60} height={60} />
+      
+      <p className='text-xlg align-middle leading-loose mt-3'>Landsloven</p>
     </div>
   ),
   i18n: [
@@ -19,8 +22,20 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/uib-ub/exhibition-landsloven-nextra',
   footer: {
-    text: 'Universitetsbiblioteket i Bergen, Høyskolen på Vestlandet, Vestland fylkeskommune',
+    text: (
+      <div className='font-serif'>
+        <p>Universitetsbiblioteket i Bergen, Høyskolen på Vestlandet, Vestland fylkeskommune</p>
+      </div>
+    ),
   },
+  /* primaryHue: {
+    dark: 200,
+    light: 200,
+  },
+  primarySaturation: {
+    dark: 50,
+    light: 50,
+  }, */
 }
 
 export default config

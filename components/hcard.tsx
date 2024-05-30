@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 // image should have width / height (but we dont know that, so we need to set fill or height 0 (?)
 
-const HCard = ({ obj, imageurl, alttext }: { obj?: object, imageurl?: string, alttext?: string  }) => {
+const HCard = ({ title, ingress, image, alttext }: { title?:string, image?: string, ingress?:string, alt?: string  }) => {
 return (
   <div class="max-w-sm w-full lg:max-w-full lg:flex my-4 max-w rounded shadow-lg xoverflow-hidden bg-white dark:bg-yellow-800" >
       <Image
-            src={imageurl}  
-            alt={alttext}
+            src={image}  
+            alt={title}
             width={0}
             height={0}
             sizes="100vw"
