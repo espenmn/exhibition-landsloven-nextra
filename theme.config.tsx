@@ -5,14 +5,11 @@ import Image from 'next/image';
 
 const config: DocsThemeConfig = {
   logo: (
-    <span>
+    <div className='flex gap-3'>
       <Image src="/images/landslov-logo.png" alt="Logo" width={200} height={40} />
-      {/* <span>Landsloven</span> */}
-    </span>
+      {/* <span className='font-antiqua'>Landsloven</span> */}
+    </div>
   ),
-  project: {
-    link: 'https://github.com/uib-bub/exhibition-landsloven-nextra',
-  },
   i18n: [
     { locale: 'no', text: 'Norsk' },
     { locale: 'en', text: 'Engelsk' },

@@ -6,43 +6,43 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
     // Layout 1 if iamge exists
     <div>
     {image ? (
-     <div class="flex flex-wrap w-full rounded type-card overflow-hidden bg-white shadow-lg dark:bg-black">
+     <div className={"flex flex-wrap w-full rounded type-card xoverflow-hidden shadow-lg"}>
 
-         <figure class="w-1/3 dark:bg-slate-800">
+         <figure className="w-full sm:w-1/3">
           <Image
             src={image}
             alt={alt}
-            width={384}
-            height={512}
-            class="w-auto h-24 xmd:w-48 md:h-auto md:rounded-none rounded-full mx-auto object-cover]" 
+            width={768}
+            height={468}
+            className=" w-full h-full sm:h-48 sm:min-sm:h-48 max-h-96 xmd:w-48 md:h-auto  mx-auto object-cover" 
           />
          </figure>
-         <div class="grow w-2/3 p-6 text-center md:text-left space-y-4">
+         <div className="grow w-full sm:w-2/3 p-6 text-center md:text-left space-y-4">
              <p class="font-serif text-2xl font-medium dark:text-slate-100">
                {quote}
              </p>
              
-             <div className="text-right text-red-700 dark:text-sky-400">
+             <div className="text-center md:text-right text-red-700 dark:text-sky-400">
                {name}  
              </div>
-             <div class="text-slate-700 dark:text-slate-400">
+             <div className="text-slate-700 dark:text-slate-400">
                {worktitle}
              </div> 
          </div> 
      </div>
      ) : (
-      <div class="w-full text-center md:text-left space-y-4  bg-red-700 xbg-sky-500 text-white dark:bg-white rounded-md">
-             <p class="text-lg font-medium">
+     <div className="w-full rounded type-card overflow-hidden border-1 border-white border-solid shadow-lg  grow p-6 text-left xmd:text-left space-y-4 bg-red-700 xbg-sky-500 text-white dark:bg-slate-100">
+             <p class="text-2xl">
                {quote}
              </p>
-             
-             <div class="text-right text-sky-100 dark:text-sky-400">
+
+             <div className="text-right text-sky-100 dark:text-sky-400">
                {name}
              </div>
-             <div class="text-right text-sky-50 dark:text-slate-400">
+             <div className="text-right text-sky-50 dark:text-slate-400">
                {worktitle}
-             </div>
-     </div>
+             </div> 
+          </div> 
     )}
     </div>
 

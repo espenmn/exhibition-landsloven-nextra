@@ -1,0 +1,225 @@
+import SubPages from 'components/sub-pages'
+import Work from 'components/work'
+import meta from './_meta.no.json'
+import dynamic from 'next/dynamic';
+import Card from 'components/card';
+import TextCard from 'components/textcard';
+import HCard from 'components/hcard';
+import SmallCard from 'components/smallcard';
+import HalfCard from 'components/halfcard';
+import Parallax from 'components/parallax';
+import Quoter from 'components/quoter';
+import FlexDiv from 'components/flexdiv';
+import FlexGrid from 'components/flexgrid';
+
+import * as JordContent from './jord.no.mdx';
+import * as SlaveContent from './slave.no.mdx';
+import * as AgriContent from './agri.no.mdx';
+import * as TunContent from './tun.no.mdx';
+import * as SildContent from './sild.no.mdx';
+import * as HvalContent from './hval.no.mdx';
+
+import * as PageList from './_meta.no.json'; 
+ 
+import Image from 'next/image'
+
+
+
+# Design  
+
+Random text --MainPages meta=\{meta\} 
+&nbsp;
+
+<div class="my-4 flex flex-wrap justify-items-stretch divide-x divide-none sm:divide-solid lg:divide-solid divide-black divide-x-1">
+<div class="text-left flex-1">
+<h1 class="my-2 font-sans font-black text-2xl sm:text-xl lg:text-4xl text-left">FINN BÆREKRAFTS&shy;FORSKNING</h1>
+<p class="my-2">Vi støtter bla bla</p>
+</div>
+<div class="xgrow-0 sm:pl-5">
+ <Image 
+              src="/images/SDG-wheel.png" 
+              alt='logo' 
+              width={300} 
+              height={300} 
+              class="w-full object-cover aspect-[1/1]" 
+          />
+ 
+</div>
+</div>
+
+
+ 
+> \<FlexGrid gap={3} padding={0} margin={0} \/\>
+
+&nbsp;
+ 
+<FlexGrid maxcolumns={9} gap={3} padding={0} margin={0}>
+      <div className="bg-red-500 h-32">Item 1</div>
+      <div className="bg-green-500 h-32">Item 2</div>
+      <div className="bg-blue-500 h-32">Item 3</div>
+      <div className="bg-yellow-500 h-32">Item 4</div>
+      <div className="bg-purple-500 h-32">Item 5</div>
+      <div className="bg-pink-500 h-32">Item 6</div>
+      <div className="bg-orange-500 h-32">Item 7</div>
+      <div className="bg-teal-500 h-32">Item 8</div>
+      <div className="bg-indigo-500 h-32">Item 9</div>
+    </FlexGrid>
+
+
+<FlexGrid maxcolumns={12} gap={3} padding={6} margin={10} bgcolor="bg-[url('/images/bk_gul.svg')] bg-no-repeat" >
+  <SmallCard desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <SmallCard desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+ 
+</FlexGrid>
+
+<FlexGrid maxcolumns={12} gap={3} padding={6} margin={10} bgcolor="bg-slate-200 bg-[url('/images/landslov-ornament.png')] bg-no-repeat" >
+  <Card desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <Card desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <Card desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+ 
+</FlexGrid>
+
+
+<FlexGrid maxcolumns={12} gap={3} padding={6} margin={10} bgcolor="bg-slate-200 bg-[url('/images/ornament.png')] bg-no-repeat" >
+  <Card desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <Card desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <Card desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+ 
+</FlexGrid>
+
+
+
+
+# Design / Componenter
+
+Eksempler på bruk av designkomponenter [Espen MN]. 
+
+
+> HCard (faktaboks)
+
+
+<HCard 
+  imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" 
+  alttext="trell"
+  obj={Object.keys(PageList).map((fileName) => (
+  <div key={fileName}>{fileName}</div>
+  
+))
+
+}/>
+
+
+----------------------------
+
+
+> TextCard (farget boks med tekst)
+
+```
+<TextCard 
+  title="Min tittel"  
+  bodytext="bodytext" 
+/>
+``` 
+
+<TextCard title="Min tittel" bodytext="bodytext"  /> 
+
+
+----------------------------
+
+> Card (boks med skygge, evnt bredde er statt av 'parent container')
+> All tekst i mdx fil blir rendret
+
+```
+<HCard 
+  desc={  <SildContent.default /> }
+  imageurl= 'imageurl' 
+  alttext= 'alt text' 
+/>  
+``` 
+
+<Card 
+  desc={ <SildContent.default /> } 
+  imageurl = "/images/21816489446a1809dcdeb8606f5a13f2.jpeg"  
+  alttext='Random text' 
+/> 
+
+
+
+----------------------------
+
+> Card (samme som over men med bilde / alttekst definert i Sild MDX fil)
+> All tekst i mdx fil blir rendret
+
+```
+<HCard 
+  desc=      {  <SildContent.default />  }
+  iimageurl = {  SildContent.metadata.imageurl   }  
+  alttext={  SildContent.metadata.alttext   } 
+/>  
+``` 
+
+
+<Card desc={  <SildContent.default />} imageurl = {  SildContent.metadata.imageurl   }  alttext={  SildContent.metadata.alttext   }  /> 
+
+ 
+
+
+
+
+----------------------------
+
+> Card (inne i flex-grid 3)
+
+```
+    <div class="flex grid gap-3 grid-cols-3 my-4 p-4 bg-slate-200">
+```
+
+
+<div class="flex grid gap-3 grid-cols-3 my-4 p-4 bg-slate-200">
+  <Card desc={  <AgriContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" /> 
+  <Card desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" /> 
+</div>
+
+
+
+----------------------------
+
+> HalfCard (inne i flex-grid 3)
+
+```
+    <div class="flex grid gap-2 grid-cols-2 my-8">
+```
+
+
+ 
+<div class="flex grid gap-2 grid-cols-2 my-8">
+  <HalfCard title="Tittel" bodytext="Some random text here" image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+  <HalfCard title="Tittel" bodytext="Some random text here" image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+</div>
+
+
+----------------------------
+
+> SmallCard (inne i flex-grid 3)
+
+```
+    <div class="flex grid gap-3 grid-cols-3 my-8">
+```
+
+<div class="flex grid gap-3 grid-cols-3 my-8">
+  <SmallCard desc={  <AgriContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"   tag="#Jord"  /> 
+  <SmallCard desc={  <JordContent.default /> } imageurl="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="Sildefisket" tag="#Landloven" /> 
+  <SmallCard desc={  <HvalContent.default /> } imageurl="/images/1412017001.jpg" alt="Sildefisket" tag="#Landloven" /> 
+</div>
+ 
+<Quoter quote="SOmething here" name="Espen Moe-Nilssen" worktitle="Designer" image="/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg" alt="trell"     />
+
+<Parallax obj={ SildContent } />
+
+<Parallax obj={ AgriContent } />
+
+<Parallax obj={ SildContent } />
+
+
+
+

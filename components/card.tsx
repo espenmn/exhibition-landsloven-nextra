@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 
 interface CardProps {
+  obj?: object;
   desc?:string;
   imageurl?: string;
   alttext?: string;
@@ -13,12 +14,14 @@ interface CardProps {
 // TO DO: Deafault image or 'check if it exists)
 
 const Card = (props) => {
-  const { desc = '', alttext='bilde',  imageurl = '' } = props;
+  const { obj, desc = '', alttext='bilde',  imageurl = '/obj.imageurl' } = props;
+  const title = obj.title
+ 
   return (
       <article className="rounded type-card overflow-hidden shadow-lg bg-white dark:bg-slate-200" >
  
           <Image
-            src={imageurl}
+            src='/image.jpg'
             alt={alttext}
             width={0}
             height={0}
@@ -28,7 +31,9 @@ const Card = (props) => {
  
         
         <div class="p-4">
-          { desc }  
+    
+        {  title }
+
         
         </div>
       

@@ -5,7 +5,12 @@
 /*For å se hvor elementene er */
 body  {
 	/* @apply sandy; */
-	background-color:#edede3;
+	background-color: #f8f8f8; 
+}
+
+dark:body  {
+	/* @apply sandy; */
+	background-color: #444; 
 }
 
 
@@ -30,7 +35,7 @@ code.nx-border-black {
 
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
-	 color: #d34c4c; 
+	 @apply text-red-600; 
 }
 
 .smallcard h1.nx-mt-2.nx-text-slate-900 {

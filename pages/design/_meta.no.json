@@ -59,10 +59,27 @@
     "title": "Sildefiske",
     "image": "/images/1412017001.jpg",
     "desc": "Sildefisket bla bla ",
-    "klass": "w-1/2"
+    "klass": "w-1/2",
+    "theme": {
+      "breadcrumb": true,
+      "layout": "full",
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": false
+    }
   },
   "hval": {
-    "title": "Hval"
- 
+    "title": "Hval",
+    "image": "hval.jpg",
+    "desc": "«Folk kan fange hval hvor de vil, unntatt sildehval under sildefisket»",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": false,
+      "toc": true,
+      "pagination": false
+    }
   }
 }
