@@ -8,6 +8,8 @@ import Spacer  from 'components/spacer'
 import Container from 'components/container'
 import SubBox  from 'components/subbox' 
 
+import FlexGrid from 'components/flexgrid';
+
 import Image from 'next/image';
 
 
@@ -26,24 +28,57 @@ import Image from 'next/image';
 
 # Tyvebolken
 
-<Spacer height="6" />
-
-<Blockquote
-    quote='«Det er forståelig at noen som ikke kan få seg arbeid til livsopphold, stjeler mat, og på den måten berger livet sitt fra sult, da skal han ikke straffes for det tjuveriet.»'
-    footer='Tyvebolken, kapittel 1'
-/>
 
 <Spacer height="6" />
 
 <Blockquote
     quote='«Det er forståelig at noen som ikke kan få seg arbeid til livsopphold, stjeler mat, og på den måten berger livet sitt fra sult, da skal han ikke straffes for det tjuveriet.»'
     footer='Tyvebolken, kapittel 1'
-    image = '/images/standard_Funeral_of_ruthenian_noble_by_Siemiradzki_1_.jpg' 
+    image = '/images/tigging.jpg' 
 />
 
 <SubBox items={sections.items} columns={2}/>
-
+<Spacer height="6" /> 
 
 Den siste bolken i Landsloven er Tyvebolken, som definerer tyveri og beskriver hvordan man stilte tyver til ansvar. Her er prosedyrer for kunngjøring og stevning, forfølgelse og ransakelse, pågripelse, varetekt, rettergang og straff. Hvis for eksempel tyven ble tatt på fersk gjerning, skulle han bringes til kongens ombudsmann med tyvegodset bundet på ryggen. Det legges vekt på at tyvens straff skulle utmåles etter omstendighetene. Den som stjal mat når han sultet, fordi han ikke fikk arbeid til å forsørge seg, skulle slippe straff. Bøter var den vanligste straffen, men den som stjal mye eller ofte risikerte dødsstraff. Det gis flere konkrete eksempel på hva som var regnet som tyveri: Grønnsaks- og fruktslang, melking av andres kuer, tyveri av katt og hund, nasking av kniv og belte, bortføring av hauker, flytting av grensesteiner osv. En person ble beskyldt for tyveri kunne prøve å fri seg fra anklagen ved å sverge ed på sin uskyld. Tyvebolken skildrer på hvilken måte eder skulle sverges, og hvor mange personer som skulle sverge sammen med den anklagede for å forsterke eden. Størrelsen på bøtene og omfanget av forbrytelsen var avgjørende for hvor mange vitner en trengte. Loven skildrer også hvordan personer som svor falskt skulle straffes.
+
+<Spacer height="6" /><Spacer height="6" />
+
+
+
+
+<FlexGrid maxcolumns={12}>
+<Image
+    src='/images/tjuvebolk1.jpg'
+    alt='Plakat'
+    width={500}
+    height={500}
+    className="object-cover" 
+/>
+<Image
+    src='/images/tjuvebolk2.jpg'
+    alt='Plakat'
+    width={500}
+    height={500}
+    className="object-cover" 
+/>
+<Image
+    src='/images/tjuvebolk3.jpg'
+    alt='Plakat'
+    width={500}
+    height={500}
+    className="object-cover" 
+/>
+</FlexGrid>
+
+<Spacer height="6" />
+<Spacer height="6" />
+<Spacer height="6" />
+
+<Blockquote
+    quote='«Det er forståelig at noen som ikke kan få seg arbeid til livsopphold, stjeler mat, og på den måten berger livet sitt fra sult, da skal han ikke straffes for det tjuveriet.»'
+    footer='Tyvebolken, kapittel 1'
+/>
+
 
 </Container>

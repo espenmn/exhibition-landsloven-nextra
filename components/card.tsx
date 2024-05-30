@@ -19,24 +19,23 @@ interface CardProps {
 
 
 const Card = (props) => {
-  const { path, title, ingress = '', alttext='bilde',  image = '' } = props;
+  const { path='', title, ingress = '', alt='bilde',  image = '' } = props;
  
   return (
-      <article className="rounded type-card overflow-hidden shadow-lg bg-white dark:bg-slate-200" >
+      <article key={path} className="rounded type-card overflow-hidden shadow-lg hover:shadow-md" > 
         <Link href={path} > 
-
- 
+       
           <Image
             src={image}
-            alt={alttext}
+            alt={alt}
             width={0}
             height={0}
-            sizes="100vw"
-            className="w-full object-cover aspect-[9/7] min-h-[100px]"
+            sizes="50vw"
+            className="w-full object-cover aspect-[9/7] min-h-[120px] max-h-[250px]"
           />
  
-        <div className="p-4">
-          <h1 className="nx-mt-2 nx-text-3xl nx-font-bold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100">{ title }</h1>   
+        <div className="p-4 dark:p-2 ">
+          <h1 className="nx-mt-2 nx-text-3xl nx-font-bold nx-tracking-tight nx-text-slate-900">{ title }</h1>   
           <p className="text-xl dark:text-slate-100">{ ingress }</p>
         
         </div>

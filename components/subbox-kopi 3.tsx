@@ -46,6 +46,7 @@ const SubBox = ({ items }: { items: MenuItems }) => {
           title={title}
           ingress={ingress}
           image={image}
+          alt={alt}
           
         />
       {image && (

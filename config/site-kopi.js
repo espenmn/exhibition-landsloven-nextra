@@ -33,7 +33,7 @@ export default {
           no: "Prologen er en introduksjon til landsloven.",
           en: "The prologue is an introduction to the law of the land."
         },
-        image: "/images/ting.jpg",
+        image: "",
         class: ""
       },
       tingfarebolken: {
@@ -42,7 +42,8 @@ export default {
           en: "Section about going to the assemblies"
         },
         href: "/tingfarebolken/introduksjon",
-        class: "/images/ting.jpg"
+        image: "",
+        class: ""
       },
       kristendomsbolken: {
         title: {

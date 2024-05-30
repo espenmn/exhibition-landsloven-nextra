@@ -13,7 +13,7 @@ export default {
       },
       href: "/arvetallet/ekteskap",
       ingress: "",
-      image: "",
+      image: "/images/arvetallet.jpg",
       class: "",
     },
     medgift: {

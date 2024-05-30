@@ -1,16 +1,18 @@
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import Image from 'next/image'
  
-
-
+//Alternative logo
+// <!--Image src="/images/logo_horizontal.svg" alt="Landsloven logo" width={240} height={45} /-->
   
 
 const config: DocsThemeConfig = {
   logo: (
     <div className='flex gap-2'>
-      <Image src="/images/logo_nett.svg" alt="Landsloven logo" width={60} height={60} />
+      <Image className="sm:block hidden" src="/images/logo_horizontal.svg" alt="Landsloven logo" width={240} height={45} />
+      <Image className="sm:hidden block" src="/images/logo_nett.svg" alt="Landsloven logo" width={60} height={60} />
+
       
-      <p className='text-xlg align-middle leading-loose mt-3'>Landsloven</p>
+      <p className='sm:hidden block text-xlg align-middle leading-loose mt-3'>Landsloven</p>
     </div>
   ),
   i18n: [

@@ -18,16 +18,16 @@
   }
 }
 
-
+@media (prefers-color-scheme: dark) {
+ body  {
+	/* @apply sandy; */
+	background-color: #444; 
+}
+}
 
 body  {
 	/* @apply sandy; */
 	background-color: #f8f8f8; 
-}
-
-dark:body  {
-	/* @apply sandy; */
-	background-color: #444; 
 }
 
 
@@ -42,6 +42,12 @@ dark:body  {
        
 }
 
+.firstletter::first-letter  {
+	
+     @apply text-9xl text-red-700 float-left inline-block bg-orange-100 px-4 mr-4  ;
+     
+}  
+
  
 /* Code block design */
 code.nx-border-black {
@@ -52,7 +58,8 @@ code.nx-border-black {
 
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
-	 @apply text-red-600; 
+	 @apply text-red-700; 
+	 @apply font-medium;
 }
 
 .smallcard h1.nx-mt-2.nx-text-slate-900 {

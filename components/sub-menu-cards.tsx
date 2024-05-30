@@ -4,16 +4,15 @@ import { useRouter } from 'next/router';
 
 import SubBox from  './subbox';
 import Card from  './card'; 
-import SmallCard from  './smallcard';
-import HCard from  './hcard';
+ 
   
 
-const componentsMap = {
-  SubBox: SubBox,
-  Card: Card,
-  SmallCard, SmallCard,
-  HCard, HCard
-};
+// const componentsMap = {
+//   SubBox: SubBox,
+//   Card: Card,
+//   SmallCard, SmallCard,
+//   HCard, HCard
+// };
 
 
 type MenuItems = {
@@ -26,7 +25,10 @@ type MenuItems = {
   };
 };
 
-const SubMenuCards = ({ items }: { items: MenuItems }) => {
+const SubMenuCards = ({ items, columns }: { items: MenuItems, columns?: string }) => {
+
+  const maxcolumns = '3';
+
   if (!items) {
     return null;
   }
@@ -36,30 +38,25 @@ const SubMenuCards = ({ items }: { items: MenuItems }) => {
   const subPages = Object.entries(items).map(([key, value], i) => {
     const title = value.title[locale]
     const path = value.href
+    const image =  value.image ? value.image : '/images/dummy_lands_b.jpg';
+    const ingress = value.ingress ? value.ingress[locale] : undefined
 
     // Can use "generic" Card component here
     return (
-      <div
-        key={path}
-        className='flex flex-row gap-3 p-3 bg-ll-blue'
-      >
-        <Image src={'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNjY2NjY2MiPjwvcmVjdD4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNnB4IiBmaWxsPSIjMzMzMzMzIj4yMDB4MjAwPC90ZXh0PiAgIAo8L3N2Zz4='} alt={value.title} width={200} height={200} />
-        <div className='flex flex-col gap-3 p-3'>
-          <Link
-            className='text-ll-gold md:text-2xl'
-            href={path}
-          >
-            {title}
-          </Link>
-          {value.ingress ? <p className='text-white'>{value.ingress[locale]}</p> : null}
-        </div>
-      </div>
+      
+      <Card
+          image={image}
+          alt={title}
+          title={title}
+          ingress={ingress}
+          path={path}
+        /> 
     )
   })
 
   return (
     <section className='w-full py-5'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+      <div className={`flex grid grid-cols-1 md:grid-cols-${columns} gap-5`}>
         {subPages.map((subpage: any) => (
           subpage
         ))}
