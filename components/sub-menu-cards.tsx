@@ -57,11 +57,11 @@ const SubMenuCards = ({ items, columns, gap }: { items: MenuItems, columns?: str
   // Mapping columns to Tailwind CSS  classes
   const columnsClass = {
     1: 'dm:grid-cols-1',
-    2: 'dm:grid-cols-2',
-    3: 'dm:grid-cols-3 sm:grid-cols-2',
-    4: 'dm:grid-cols-4 sm:grid-cols-2',
-    5: 'dm:grid-cols-5 sm:grid-cols-2',
-    6: 'dm:grid-cols-6 sm:grid-cols-2',
+    2: 'sm:grid-cols-2',
+    3: 'sm:grid-cols-3',
+    4: 'dm:grid-cols-4 sm:grid-cols-3',
+    5: 'dm:grid-cols-5 sm:grid-cols-3',
+    6: 'dm:grid-cols-6 sm:grid-cols-3',
     // add more mappings if needed
   };
 
@@ -82,6 +82,7 @@ const SubMenuCards = ({ items, columns, gap }: { items: MenuItems, columns?: str
 
   return (
     <section className="w-full py-5">
+      {gridClass} {gapsClass}
       <div className={`grid ${gridClass} grid-cols-1 ${gapsClass}`}>
         {subPages}
       </div>
