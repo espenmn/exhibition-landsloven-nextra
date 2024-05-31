@@ -35,7 +35,7 @@ const Card = (props) => {
           />
  
         <div className="px-4 pt-2 pb-4 dark:px-4 pt-0 pb-0">
-          <h1 className="nx-mt-2 text-[1.3em] font-medium leading-tight dark:dark:text-sky-300">{ title }</h1>   
+          <h1 className="nx-mt-2 font-serif text-[1.3em] font-medium leading-tight dark:dark:text-sky-300">{ title }</h1>   
           <p className="text-xl dark:text-white">{ ingress }</p>
         
         </div>
