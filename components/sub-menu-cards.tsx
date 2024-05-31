@@ -82,7 +82,7 @@ const SubMenuCards = ({ items, columns, gap }: { items: MenuItems, columns?: str
 
   return (
     <section className="w-full py-5">
-      <div className={`grid ${gridClass} ${gapsClass}`}>
+      <div className={`grid sm:${gridClass} grid-1 ${gapsClass}`}>
         {subPages}
       </div>
     </section>
