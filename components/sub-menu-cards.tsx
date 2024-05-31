@@ -20,14 +20,26 @@ const SubMenuCards = ({ items, columns, gap }: { items: MenuItems, columns?: str
     return null;
   }
 
+  const getIngressValue = (value, locale) => {
+    if (typeof value.ingress === 'string') {
+      return value.ingress;
+    } else if (value.ingress && value.ingress[locale] !== undefined) {
+      return value.ingress[locale];
+    } else {
+      return '';
+    }
+  };
+
   // Get the current locale so we can display the correct language
   const { locale } = useRouter();
 
   const subPages = Object.entries(items).map(([key, value], i) => {
     const title = value.title[locale];
     const path = value.href;
+    const ingress = getIngressValue(value, locale);
     const image = value.image ? value.image : '/images/dummy_lands_b.jpg';
-    const ingress = value.ingress ? value.ingress[locale] : undefined;
+    
+    // const ingress = value.ingress;
 
     // Can use "generic" Card component here
     return (

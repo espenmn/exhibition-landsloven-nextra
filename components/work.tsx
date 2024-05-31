@@ -19,8 +19,8 @@ const Work = ({ children, id, url, marcus, config }: { children?: ReactNode, id?
   const buttonText = locale === 'no' ? 'Se mer i Marcus' : 'Read more in Marcus'
 
   return (
-    <div className='my-10 w-full flex flex-col lg:flex-row border-solid border-2 border-orange-200'>
-      <div className='w-full h-[500px] md:h-[700px] lg:h-[70vh] relative bg-orange-40 dark:nx-bg-primary-300/10 z-0'>
+    <div className='my-10 w-full flex flex-col lg:flex-row border-solid border-2 border-orange-200 dark:bg-ll-blue-700'>
+      <div className='w-full h-[500px] md:h-[700px] lg:h-[70vh] relative bg-orange-40 dark:bg-ll-blue-950 z-0'>
         <Viewer
           iiifContent={manifestId}
           options={{

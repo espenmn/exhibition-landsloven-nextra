@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,jsx,ts,tsx,md,mdx}',
     './components/**/*.{js,jsx,ts,tsx,md,mdx}',
@@ -14,8 +15,11 @@ module.exports = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
       },
-      darkMode: 'media',
       colors: {
+        'll-sandy': {
+          DEFAULT: '#f7efdf',
+          '50': '#f2efe6', 
+        },
         'll-blue': {
           DEFAULT: '#133f6d',
           '50': '#f1f7fe',

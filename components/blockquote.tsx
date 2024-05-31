@@ -7,7 +7,7 @@ const Blockquote = ({ quote, image, alt, footer }: { quote: React.ReactNode, foo
     // Layout 1 if iamge exists
     <div>
     {image ? (
-     <blockquote className={"flex flex-wrap w-full rounded type-card dark:bg-red-700 shadow-lg"}>
+     <blockquote className={"flex flex-wrap w-full rounded type-card dark:bg-gray-900 shadow-lg"}>
 
          <figure className="w-full sm:w-1/3">
           <Image
@@ -15,20 +15,20 @@ const Blockquote = ({ quote, image, alt, footer }: { quote: React.ReactNode, foo
             alt={alt}
             width={768}
             height={468}
-            className=" w-full h-full sm:h-48 sm:min-sm:h-48 max-h-96 xmd:w-48 md:h-auto dark mx-auto object-cover" 
+            className=" w-full h-full sm:h-48 sm:min-sm:h-48 max-h-96 xmd:w-48 md:h-auto object-cover" 
           />
          </figure>
          <div className="grow w-full sm:w-2/3 p-6 text-center md:text-left space-y-4">
-             <p className="font-serif text-2xl font-medium dark:text-white-900">{quote}</p>
+             <p className="font-serif text-2xl font-medium dark:text-sky-100">{quote}</p>
              
-             <div className="text-center md:text-right text-red-700 dark:text-sky-400">
+             <div className="text-center md:text-right text-red-700 dark:text-sky-300">
                {footer}  
              </div>
 
          </div> 
      </blockquote>
      ) : (
-     <blockquote className="w-full rounded type-card overflow-hidden border-1 border-white border-solid shadow-lg  grow p-6 text-left xmd:text-left space-y-4 bg-red-700 xbg-sky-500 text-white dark:bg-slate-100">
+     <blockquote className="w-full rounded type-card overflow-hidden border-1 border-white border-solid shadow-lg  grow p-6 text-left xmd:text-left space-y-4 bg-red-700 xbg-sky-500 text-white  dark:bg-gray-900">
              <p className="text-2xl">
                {quote}
              </p>

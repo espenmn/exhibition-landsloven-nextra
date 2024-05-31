@@ -4,7 +4,7 @@ import Container from 'components/container'
 const Hero = ({ title, ingress, footer }: { title?: string, ingress?: string, footer?: string }) => {
   return (
  
-      <div className="flex grid bg-orange-50 -mx-6 dm:m-0 p-8 relative left-0 right-0 min-h-[32vw]  sm:min-h-[25vw] sm:bg-[url('/images/banner_overlay.png')] bg-contain bg-no-repeat bg-left">
+      <div className="flex grid bg-ll-sandy -mx-6 dm:m-0 p-8 relative left-0 right-0 min-h-[32vw]  sm:min-h-[25vw] sm:bg-[url('/images/banner_overlay.png')] bg-contain bg-no-repeat bg-left">
         <Container>
          <div className="flex flex-col justify-center float-right sm:w-1/2 h-auto">
   

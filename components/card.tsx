@@ -22,7 +22,7 @@ const Card = (props) => {
   const { path='', title, ingress = '', alt='bilde',  image = '' } = props;
  
   return (
-      <article key={path} className="rounded type-card overflow-hidden shadow-lg hover:shadow-md" > 
+      <article key={path} className="rounded type-card overflow-hidden shadow-lg hover:shadow-md dark:pb-2 dark:bg-ll-blue-950" > 
         <Link href={path} > 
        
           <Image
@@ -34,9 +34,9 @@ const Card = (props) => {
             className="w-full object-cover aspect-[9/7] min-h-[120px] max-h-[250px]"
           />
  
-        <div className="p-4 dark:p-2 ">
-          <h1 className="nx-mt-2 nx-text-3xl nx-font-bold nx-tracking-tight nx-text-slate-900">{ title }</h1>   
-          <p className="text-xl dark:text-slate-100">{ ingress }</p>
+        <div className="p-4">
+          <h1 className="nx-mt-2 nx-text-3xl nx-font-bold nx-tracking-tight nx-text-slate-900 dark:dark:text-sky-300">{ title }</h1>   
+          <p className="text-xl dark:text-white">{ ingress }</p>
         
         </div>
 

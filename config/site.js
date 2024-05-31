@@ -59,6 +59,7 @@ export default {
           en: "Land defence section"
         },
         href: "/landevernsbolken/introduksjon",
+        ingress: "«Nå går det så ille på grunn av folks synder at en hedensk eller kristen hær ett eller annet sted angriper Norges konges rike»",
         image: "",
         class: ""
       },
@@ -77,7 +78,7 @@ export default {
           en: "Inheritance list"
         },
         href: "/arvetallet/introduksjon",
-        image: "",
+        image: "/images/arvetallet.jpg",
         class: ""
       },
       odelsbolken: {
