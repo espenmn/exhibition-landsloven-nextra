@@ -22,7 +22,7 @@ const Card = (props) => {
   const { path='', title, ingress = '', alt='bilde',  image = '' } = props;
  
   return (
-      <article key={path} className="rounded type-card overflow-hidden shadow-lg hover:shadow-md dark:pb-0 dark:bg-ll-blue-950" > 
+      <article key={path} className="rounded type-card overflow-hidden mb-1 sm:my-0 shadow-lg hover:shadow-md dark:pb-0 dark:bg-ll-blue-950" > 
         <Link href={path} > 
        
           <Image
