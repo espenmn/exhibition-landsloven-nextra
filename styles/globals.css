@@ -16,7 +16,10 @@
   article * {
     @apply font-serif font-normal;
   }
+   
 }
+
+ 
 
 @media (prefers-color-scheme: dark) {
  body  {
@@ -27,21 +30,11 @@
 
 body  {
 	/* @apply sandy; */
-	background-color: #f8f8f8; 
+	/*background-color: red;  */
+	/*background-color:#f8f8f8  */
 }
 
-
-.bk-sand {
-    background-color:#f8f8f8 
-}
-
-
-.bk-sand2 {
-    background-color:#edede3;
-     background-image: 'images/landslov-ornament.png';
-       
-}
-
+ 
 .firstletter::first-letter  {
 	@apply text-9xl text-red-700 float-left inline-block bg-orange-100 px-4 mr-4  ; 
 }  

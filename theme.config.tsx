@@ -8,8 +8,8 @@ import Image from 'next/image'
 const config: DocsThemeConfig = {
   logo: (
     <div className='flex gap-2'>
-      <Image className="sm:block hidden" src="/images/logo_horizontal.svg" alt="Landsloven logo" width={240} height={45} />
-      <Image className="sm:hidden block" src="/images/logo_nett.svg" alt="Landsloven logo" width={60} height={60} />
+      <Image className="sm:block hidden" src="/images/logo_horizontal.svg" alt="Landsloven logo" width={0} height={45} />
+      <Image className="sm:hidden block" src="/images/logo_nett.svg" alt="Landsloven logo" width={0} height={60} />
 
       
       <p className='sm:hidden block text-xlg align-middle leading-loose mt-3'>Landsloven</p>
