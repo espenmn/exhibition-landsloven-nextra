@@ -50,7 +50,9 @@ code.nx-border-black {
 /* Første linje: kun for å teste at css filen lastes */
 h1.nx-mt-2.nx-text-slate-900 {
 	 @apply text-red-700; 
-	 @apply font-medium;
+	 @apply font-medium leading-tight mb-2;
+	 
+	 
 }
 
 .smallcard h1.nx-mt-2.nx-text-slate-900 {
