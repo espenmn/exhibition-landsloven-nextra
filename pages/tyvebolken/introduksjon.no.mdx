@@ -36,7 +36,7 @@ import  CommonBreadcrumbs from 'components/breadcrumbs';
 
 
     
- <CommonBreadcrumbs/> 
+ CommonBreadcrumbs
 
 > TO DO:
 > Breadcrumbs virker IKKE, siden mappene ikke har 'innhold'.
@@ -69,8 +69,7 @@ import  CommonBreadcrumbs from 'components/breadcrumbs';
 
 
 
-
-<FlexGrid maxcolumns={12}>
+<div class="flex grid gap-3 grid-cols-1 sm:grid-cols-3  p-0 my-3 bg-white">
 <Image
     src='/images/tjuvebolk1.jpg'
     alt='Plakat'
@@ -92,7 +91,7 @@ import  CommonBreadcrumbs from 'components/breadcrumbs';
     height={500}
     className="object-cover" 
 />
-</FlexGrid>
+</div>
 
 <Spacer height="6" />
 <Spacer height="6" />
