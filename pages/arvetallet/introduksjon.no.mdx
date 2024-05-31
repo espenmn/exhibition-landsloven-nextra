@@ -4,7 +4,6 @@ import sections from 'config/sections/arvefallet';
 import Quoter from 'components/quoter'; 
 import Spacer  from 'components/spacer' 
 import Container from 'components/container'
-import SubBox  from 'components/subbox' 
 
 import Blockquote from 'components/blockquote';
 import SitatHero from 'components/sitathero';
@@ -31,7 +30,7 @@ import SitatHero from 'components/sitathero';
         **Kvinners arverett ble styrket gjennom Landsloven**, men de fikk fremdeles mindre enn menn: mens en sønn arvet 2/3, arvet en datter 1/3.
       </div>
 
-<SubBox items={sections.items} columns={2} gap={10} />
+<SubMenuCards items={sections.items} columns={2} gap={10} />
 <Spacer height={24} />
 
 # {sections.introduksjon.title['no']}

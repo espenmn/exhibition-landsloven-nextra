@@ -18,14 +18,6 @@
     "title": "Bolkene",
     "type": "menu",
     "items": {
-      "design": {
-        "title": "Design",
-        "href": "/design/introduksjon",
-        "image": "/images/prolog.jpg",
-        "desc": "Design description here bla bla bla",
-        "komponent": "Card",
-        "klass": "w-full"
-      },
       "prologen": {
         "title": "Prolog",
         "href": "/prologen/introduksjon"
@@ -75,12 +67,6 @@
         "href": "/epilog/epilog"
       }
     }
-  },
-  "design": {
-    "title": "Design",
-    "type": "page",
-    "display": "hidden"
-
   },
   "prologen": {
     "title": "Prolog",
