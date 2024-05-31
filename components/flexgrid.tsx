@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
 
 interface FlexGridProps {
-  maxcolumns?: int;
+  maxcolumns?: number;
   margin?: string;
   padding?: string;
   gap?: string;
@@ -16,7 +17,7 @@ interface FlexGridProps {
 
  
 
-const FlexGrid: React.FC<FlexDivProps> = (props) => {
+const FlexGrid: React.FC<FlexGridProps> = (props) => {
   const { margin = 3, maxcolumns=6,  gap=3, padding=0, bgcolor='bg-white', bgimage='', children } = props;
 
   // Calculate responsive column counts

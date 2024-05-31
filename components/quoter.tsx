@@ -18,7 +18,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
           />
          </figure>
          <div className="grow w-full sm:w-2/3 p-6 text-center md:text-left space-y-4">
-             <p class="font-serif text-2xl font-medium dark:text-slate-100">
+             <p className="font-serif text-2xl font-medium dark:text-slate-100">
                {quote}
              </p>
              
@@ -32,7 +32,7 @@ const Quoter = ({  image, alt, quote, name, worktitle }: {  image?: string, alt?
      </div>
      ) : (
      <div className="w-full rounded type-card overflow-hidden border-1 border-white border-solid shadow-lg  grow p-6 text-left xmd:text-left space-y-4 bg-red-700 xbg-sky-500 text-white dark:bg-slate-100">
-             <p class="text-2xl">
+             <p className="text-2xl">
                {quote}
              </p>
 

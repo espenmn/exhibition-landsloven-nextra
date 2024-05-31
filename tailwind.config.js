@@ -14,6 +14,7 @@ module.exports = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
       },
+      darkMode: 'media',
       colors: {
         'll-blue': {
           DEFAULT: '#133f6d',

@@ -43,9 +43,7 @@ body  {
 }
 
 .firstletter::first-letter  {
-	
-     @apply text-9xl text-red-700 float-left inline-block bg-orange-100 px-4 mr-4  ;
-     
+	@apply text-9xl text-red-700 float-left inline-block bg-orange-100 px-4 mr-4  ; 
 }  
 
  
@@ -73,7 +71,7 @@ h1.nx-mt-2.nx-text-slate-900 {
 
 /* 'map' css classer til standard markdown varianter */
 
-blockquote {
+xblockquote {
 	@apply nx-text-slate-900 text-2xl font-semibold text-gray-900 dark:text-white;
 	@apply font-serif;
 }

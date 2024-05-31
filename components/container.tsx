@@ -1,3 +1,6 @@
+import { ReactNode } from 'react';
+
+
 interface ContainerProps {
   width?: string;
   padding?: string;
@@ -7,7 +10,7 @@ interface ContainerProps {
 }
   
 
-const Container: React.FC<SpacerProps> = (props) => {
+const Container: React.FC<ContainerProps> = (props) => {
   const { width = '833', padding = '0', margin='0', stil='', children } = props;
 
   return (

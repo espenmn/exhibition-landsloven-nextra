@@ -18,8 +18,8 @@ const SearchComponent = ({ items }) => {
 
   return (
       <div>
-    <form class="w-full flex gap-2">
-      input class="flex-grow border border-neutral-400 dark:border-white rounded p-3" 
+    <form className="w-full flex gap-2">
+      input className="flex-grow border border-neutral-400 dark:border-white rounded p-3" 
        /
         <button className= "bg-green-700 text-white font-bold border-white rounded py-3 px-5"
         type="submit" 
