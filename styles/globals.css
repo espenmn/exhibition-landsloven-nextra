@@ -39,6 +39,11 @@ body  {
 	@apply text-9xl text-red-700 float-left inline-block bg-ll-sandy px-4 mr-4  ; 
 }  
 
+
+.p-disabled  > a  {
+	 color:  #222;
+}
+
  
 /* Code block design */
 code.nx-border-black {
