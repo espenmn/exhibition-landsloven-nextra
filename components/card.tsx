@@ -19,15 +19,15 @@ interface CardProps {
 
 
 const Card = (props) => {
-  const { path='', title, ingress = '', alt='bilde',  image = '' } = props;
- 
+  const { path='', title, ingress = '', alt='',  image = '' } = props;
+  
   return (
       <article key={path} className="rounded type-card overflow-hidden mb-1 sm:my-0 shadow-lg hover:shadow-md dark:pb-0 dark:bg-ll-blue-950" > 
         <Link href={path} > 
        
           <Image
             src={image}
-            alt={alt}
+            alt={alt ? alt : title}
             width={0}
             height={0}
             sizes="50vw"
