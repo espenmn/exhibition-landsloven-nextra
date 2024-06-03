@@ -8,10 +8,10 @@ const Hero = ({ title, ingress, footer }: { title?: string, ingress?: string, fo
         <Container>
          <div className="flex flex-col justify-center float-right sm:w-1/2 h-auto">
   
-            <h1 className='text-red-700 nx-mt-2 text-2xl sm:text-4xl dark:nx-text-slate-100 font-bold'>{title}</h1>
+            <h2 className='text-red-700 nx-mt-2 text-2xl sm:text-4xl dark:text-red-700 font-medium mb-2'>{title}</h2>
         
             <p className="text-black text-xl sm:text-3xl">{ingress}</p>
-            <p className="text-right text-sm sm:text-base my-3"><i>{footer}</i></p> 
+            <p className="text-black text-right"> <cite className="text-base sm:text-base my-3 italic dark:text-black">{footer}</cite></p> 
             <p>&nbsp;</p> 
            
          </div>
