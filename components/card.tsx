@@ -33,14 +33,17 @@ const Card = (props) => {
             sizes="50vw"
             className="w-full object-cover aspect-[9/7] min-h-[120px] max-h-[250px]"
           />
+        </Link>
  
         <div className="px-4 pt-2 pb-4 dark:px-4 pt-0 pb-0">
-          <h1 className="nx-mt-2 font-serif text-[1.3em] font-medium leading-tight dark:dark:text-sky-300">{ title }</h1>   
-          <p className="text-xl dark:text-white">{ ingress }</p>
-        
+        <Link href={path} > 
+          <h1 className="nx-mt-2 font-serif text-[1.3em] font-medium leading-tight text-sky-700 dark:dark:text-sky-300 hover:underline">{ title }</h1>   
+        </Link>
+          <p className="text-xl dark:text-whiten leading-tight">{ ingress }</p> 
+          <p className=" text-right">
+            <Link className="pt-1 underline text-sky-800 font-small text-base" href={path} >Les mer</Link>    
+          </p>    
         </div>
-
-      </Link>
       </article>
     );
   };
